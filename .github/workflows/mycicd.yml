@@ -1,0 +1,14 @@
+name: Simple Start Up
+on:
+  push:
+    branches: [main]
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: check out my code
+        uses: actions/checkout@v2
+      - name: list out directory
+        run: ls
+      - name: Say hello
+        run: echo "Hello from GitHub Actions!"
